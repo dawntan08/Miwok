@@ -10,7 +10,9 @@ public class Word {
 
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+    // resource id has non-negative values.
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
      * creates a new Word object
@@ -52,4 +54,12 @@ public class Word {
      * @return resource ID for the image associated to the word
      */
     public int getImageResourceId() { return mImageResourceId;}
+
+    /**
+     *
+     * @return boolean if word object as a resource id associated with it
+     */
+    public boolean hasImage(){
+        return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
 }
