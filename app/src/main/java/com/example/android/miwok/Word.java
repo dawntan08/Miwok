@@ -11,6 +11,7 @@ public class Word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
     private int mImageResourceId = NO_IMAGE_PROVIDED;
+    private int mSoundResourceId;
     // resource id has non-negative values.
     private static final int NO_IMAGE_PROVIDED = -1;
 
@@ -19,9 +20,10 @@ public class Word {
      * @param defaultTranslation word to be translated; already known to user e.g. English
      * @param miwokTranslation miwok translation of the default word
      */
-    public Word(String defaultTranslation, String miwokTranslation){
+    public Word(String defaultTranslation, String miwokTranslation, int soundResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mSoundResourceId = soundResourceId;
     }
 
     /**
@@ -30,10 +32,12 @@ public class Word {
      * @param miwokTranslation miwok translation of the default word
      * @param imageResourceId image resource id associated to the words
      */
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId){
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId,
+                int soundResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
+        mSoundResourceId = soundResourceId;
     }
 
     /**
@@ -62,4 +66,9 @@ public class Word {
     public boolean hasImage(){
         return mImageResourceId != NO_IMAGE_PROVIDED;
     }
+
+    /**
+     * @return resource ID for the associated sound/miwok pronunciation of the word
+     */
+    public int getSoundResourceId(){ return mSoundResourceId;}
 }
