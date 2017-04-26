@@ -20,9 +20,9 @@
 
         <TextView
             android:id="@+id/miwok_text"
-            android:layout_alignParentTop="true"
             android:layout_width="match_parent"
             android:layout_height="44dp"
+            android:layout_alignParentTop="true"
             android:gravity="bottom"
             android:paddingLeft="16dp"
             android:textColor="@android:color/white"
@@ -34,22 +34,21 @@
             android:id="@+id/default_text"
             android:layout_width="match_parent"
             android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
             android:gravity="top"
             android:paddingLeft="16dp"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            tools:text="one"
-            android:layout_alignParentBottom="true"/>
+            tools:text="one" />
 
         <ImageView
             android:layout_width="wrap_content"
-            android:paddingRight="16dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_play_arrow_white_24dp"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"/>
+            android:paddingRight="16dp"
+            android:src="@drawable/ic_play_arrow_white_24dp" />
     </RelativeLayout>
-
 
 
 </LinearLayout>
