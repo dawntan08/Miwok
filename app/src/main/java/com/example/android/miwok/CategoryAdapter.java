@@ -9,9 +9,9 @@ import android.support.v4.app.FragmentManager;
  * Created by Liway on 8/22/2017.
  */
 
-public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
+public class CategoryAdapter extends FragmentPagerAdapter {
 
-    public SimpleFragmentPagerAdapter(FragmentManager fm) {
+    public CategoryAdapter(FragmentManager fm) {
         super(fm);
     }
 
